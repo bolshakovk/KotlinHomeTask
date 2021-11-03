@@ -22,13 +22,13 @@ class Dichotomy(a: Double, b: Double, val eps: Double) {
     fun calculateDichotomy() {
         while (abs(a-b) > eps){
             c = (a+b)/2
-            if(f1(a) * f1(b) <= 0)
+            if(f2(a) * f2(b) <= 0)
                 b = c
             else
                 a = c
             x = (a+b)/2
         }
-        println("x =  $x, f(x) =  ${f1(x)}")
+        println("x =  $x, f(x) =  ${f1(x)} c = $c")
     }
 
 }
